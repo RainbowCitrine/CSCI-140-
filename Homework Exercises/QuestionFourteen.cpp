@@ -21,10 +21,10 @@ void swapints(int &i, int &j)
 
 int main()
 {
-    int a = 15, b = 23; 
+    int i = 15, j = 23; 
     
-    std::cout << "Before Swap: " << a << " " << b << std::endl; 
-    swapints(a, b); 
+    std::cout << "Before Swap: " << i << " " << j << std::endl; 
+    swapints(i, j); 
     
-    std::cout << "After Swap: " << a << " " << b;
+    std::cout << "After Swap: " << i << " " << j;
 }
