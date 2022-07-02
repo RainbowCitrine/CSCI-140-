@@ -10,10 +10,12 @@ it should cout "3+2 = 5"
 
 #include <iostream> 
 
-int total(int num1 = 3, int num2 =2){return num1 + num2;}
+void total(int num1 = 3, int num2 = 2){int sum = 0; sum = num1 + num2; std::cout << sum;}
 
 int main()
 {
-    std::cout << total(); 
+    total(); 
 }
+
+
 
