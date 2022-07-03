@@ -9,3 +9,16 @@ int main()
     v.erase(v.begin()); 
     for(int i = 0; i < v.size(); ++i) std::cout << v.at(i) << " ";
 }
+
+
+// OR 
+
+#include <iostream> 
+#include <vector>
+
+int main()
+{
+    std::vector<int> v = {1, 2, 3};
+    v.pop_back(); 
+    for(int i = 0; i < v.size(); ++i) std::cout << v.at(i) << " ";
+}
