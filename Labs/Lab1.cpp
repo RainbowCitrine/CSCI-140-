@@ -1,3 +1,31 @@
+/*
+
+
+In this lab assignment, please use C++ to build a program that let user repeatedly enter a number (escape with sentinel "-999"), and at the end, print out the amount of:
+ - input value should be a double value.
+ - integer numbers user has entered, and the total of them. (using isNumber(int) function)
+ - prime numbers user has entered, and the total of them. (using isPrime(int) function)
+ - real numbers user has entered, and the total of them. (using isNumber(float) function)
+
+i.e.: users input:
+3
+5
+9
+2.6
+1.8
+-999
+
+output:
+User has entered:
+1 integer, total: 9
+2 prime numbers, total: 8
+2 float values, total: 4.4
+
+
+*/
+
+
+
 #include <iostream> 
 #include <vector>
 #include <math.h>
