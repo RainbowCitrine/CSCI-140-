@@ -1,3 +1,17 @@
+/*
+
+
+In this lab assignment, please apply the Algorithm Analysis technique (chapter9, slide 27) to count total time complexity in bubble sort, selection sort, and (recursive) quick sort. 
+After that, please try them on an identical (unsorted) array to see which algorithm have the highest complexity, and which algorithm has the lowest.
+
+Your output should be:
+   Bubble sort time complexity: <value>
+   Quick sort time complexity <value>
+   Selection sort time complexity: <value>
+   The most efficient algorithm to sort this array is ..... and the least efficient one is ....
+   
+*/
+
 #include <iostream> 
 #include <ctime> 
 #include <stdlib.h>
