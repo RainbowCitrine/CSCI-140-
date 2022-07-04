@@ -1,12 +1,13 @@
 #include <iostream> 
 #include <ctime> 
 #include <stdlib.h>
+#include <string.h>
 
 int bubbleC, selectionC, quickC; 
+std::string s1, s2;
 
-void bubblesort()
-{
-   int bubble[10] = {2, 4, 1, 3, 6, 7, 8, 5, 9, 10}; 
+void bubblesort(int bubble[])
+{ 
    
    std::cout << "The original Bubble Sort sequence is" <<std::endl;
    for(int i = 0; i < 10; ++i)
@@ -21,7 +22,7 @@ void bubblesort()
         int t; 
         for(int j = i + 1; j < 10; ++j)
         {
-          bubbleC += 3; 
+          bubbleC += 2; 
             if(bubble[i] > bubble[j])
             {
                 t = bubble[i]; 
@@ -73,11 +74,11 @@ void QuickSort(int arr[], int s, int e)
         QuickSort(arr, (p +1), e); quickC +=4;//Pivote right for taller
     }
 }
-void printQuickSort()
+void printQuickSort(int myarr[])
 {
     
-    int size = 10; 
-    int myarr[10] = {2, 4, 1, 3, 6, 7, 8, 5, 9, 10}; 
+    int size = 10;
+     
     std::cout << std::endl; 
     std::cout << "The originl Quick Sort Sequence is" << std::endl; 
     for(int i = 0; i < size; ++i)
@@ -94,10 +95,9 @@ void printQuickSort()
     }
     
 }
-void SelectionSort()
+void SelectionSort(int arr[])
 {
-    int arr[10] = {2, 4, 1, 3, 6, 7, 8, 5, 9, 10};
-    std::cout << std::endl; 
+  std::cout << std::endl; 
     std::cout << "Original Selection Sort Sequence is" << std::endl;; 
     for(int i = 0; i < 10; ++i)
     {
@@ -105,11 +105,11 @@ void SelectionSort()
     }
     for(int i = 0; i < 9; ++i)
     {
-       selectionC += 3; 
+       selectionC += 2; 
         int minval = i; 
         for(int j = i+1; j < 10; ++j)
         {
-          selectionC += 3;
+          selectionC += 2;
             if(arr[j] < arr[minval])
             {
                 minval = j; 
@@ -131,11 +131,44 @@ void SelectionSort()
     }
 
 }
+void print()
+{
+  if(bubbleC < selectionC && bubbleC < quickC)
+  {
+    s1 = "Bubble Sort"; 
+  }
+  else if(quickC < bubbleC && quickC < selectionC) 
+  {
+    s1 = "Quick Sort"; 
+  }
+  else
+  {
+    s1 = "Selection Sort"; 
+  }
+
+  if(bubbleC > selectionC && bubbleC > quickC)
+  {
+    s2 = "Bubble Sort"; 
+  }
+  else if(quickC > bubbleC && quickC > selectionC)
+  {
+    s2 = "Quick Sort"; 
+  }
+  else
+  {
+    s2 = "Selection Sort"; 
+  }
+  
+
+}
 int main()
 {
-    bubblesort(); 
-    printQuickSort(); 
-    SelectionSort(); 
+    int test[10] = {2, 4, 1, 3, 6, 7, 8, 5, 9, 10};
+  int test2[10] = {2, 4, 1, 3, 6, 7, 8, 5, 9, 10};
+  int test3[10] = {2, 4, 1, 3, 6, 7, 8, 5, 9, 10};
+    bubblesort(test); 
+    printQuickSort(test3); 
+    SelectionSort(test2); 
     std::cout << std::endl; 
     std::cout << std::endl; 
     std::cout << std::endl;
@@ -144,6 +177,6 @@ int main()
     std::cout << "Selection sort time complexity: " << selectionC<<std::endl;
 
   std::cout << std::endl; 
-  
-    std::cout << "The most efficient algorithm to sort the array is Quick sort and the least efficeint algorithm is Bubble sort" << std::endl;
+  print();
+    std::cout << "The most efficient algorithm to sort the array is " << s1 << " and the least efficeint algorithm is " << s2 << std::endl;
 }
